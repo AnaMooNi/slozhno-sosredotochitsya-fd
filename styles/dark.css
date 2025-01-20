@@ -5,6 +5,7 @@
 */
 
 :root.theme-dark {
+  --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
   --title-color: #DB00FF;
   --text-color: #000028;
@@ -13,6 +14,7 @@
   --border-color: #FF0070;
   --rec-color: #FF0070;
   --hover-color: #FF007044;
+  --buttom-color: #FF0070;
 }
 
 .theme-dark .page {

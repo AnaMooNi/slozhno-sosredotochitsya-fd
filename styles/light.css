@@ -5,6 +5,7 @@
 */
 
 :root.theme-light {
+  --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
   --title-color: #FFC2E6;
   --text-color: #353430;
@@ -13,11 +14,13 @@
   --border-color: #353430;
   --rec-color: transparent; 
   --hover-color: #FF8DCB44;
+  --buttom-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
   /* Вам также нужно будет написать ряд подобных селекторов */
   :root{
+  --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
   --title-color: #FFC2E6;
   --text-color: #353430;
