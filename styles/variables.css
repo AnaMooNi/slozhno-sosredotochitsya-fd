@@ -9,4 +9,7 @@
   --rec-color: #FF0070;
   --hover-color: #FF007044;
   --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --buttom-color: #FF0070;
+  --main-title-color: #FF0070;
+  --link-border-color: #F1B2CE;
 }
