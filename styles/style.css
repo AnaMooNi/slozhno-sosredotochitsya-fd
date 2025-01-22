@@ -6,15 +6,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   font-family: "IBM Plex mono", monospace, sans-serif;
   font-size: 18px;
+  max-width: 1024px;
+  min-width: 375px;
+  margin: 0 auto;
 }
 
 .header {
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
-  block-size: min(100vh, 668px);
+  block-size: max(100vh, 668px);
 }
 
 .rec-icon {
@@ -91,7 +95,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -114,7 +118,7 @@
 }
 
 .header__subtitle {
-  margin: 55px 10px;
+  margin: 56px 10px;
   line-height: 23.4px;
   align-self: flex-start;
   font-weight: 700;
@@ -172,7 +176,7 @@
 }
 
 .link:hover {
-  border-block-end: 2px solid var(--link-border-color);
+  border-block-end: 1px solid var(--link-border-color);
 }
 
 .link:focus {
@@ -180,7 +184,7 @@
 }
 
 .link:focus-visible {
-  outline: 2px solid var(--link-border-color);
+  outline: 1px solid var(--link-border-color);
 }
 
 
@@ -213,18 +217,15 @@
   text-shadow: 4px 4px 0px var(--accent-color);
 }
 
-@media (width>=780px) {
+@media (width>=768px) {
   
-  .page {
-    margin: 10px;
-  }
-
   .header {
     block-size: max(100vh, 1024px);
   }
 
   .header__theme-menu {
-    margin-block-start: 110px;
+    margin-block-start: 115px;
+    padding-inline-end: 10px;
   }
 
   .header__theme-menu-list {
@@ -232,22 +233,21 @@
   }
 
   .header__title {
-    padding-inline: 0;
+    padding: 0;
   }
 
   .header__subtitle {
     place-self: center end;
     line-height: 23.4px;
-    margin-inline-start: 384px;
+    margin-inline: 385px 20px;
+    margin-block-end: 75px;
+    letter-spacing: 0.1px;
   }
 
   .main {
-    padding-block: 70px;
-    gap: 85px;
-  }
-  
-  .main_text {
-    letter-spacing: 0.3px;
+    margin-inline: 20px;
+    padding-block: 60px;
+    gap: 80px;
   }
 
   .main_section {
@@ -264,7 +264,6 @@
 
   .what {
     grid-template-columns: repeat(3, 1fr);
-    gap: 23px;
   }
 
   .content_what {
@@ -272,7 +271,7 @@
   }
 
   .how {
-    gap: 25px;
+    gap: 20.5px;
   }
 
   .main_how_title {
@@ -306,12 +305,20 @@
   .footer {
     block-size: max(100vh, 1024px);
   }
+
+  .decorated-zone::before,
+  .decorated-zone::after,
+  .rec-icon {
+    margin: 10px;
+  }
+
+
 }
 
 @media (width >=1024px) {
 
   .page {
-    margin: 0;
+    margin: 0 auto;
   }
 
   .header {
@@ -324,13 +331,14 @@
   }
 
   .header__theme-menu {
+    padding: 0;
     margin: 10px;
     justify-self: center;
   }
 
   .header__subtitle {
-    width: clamp(491px, 50%, 364px);
-    margin-inline-end: 20px;
+    margin-inline: 513px 20px;
+    margin-block-end: 75px;
   }
 
   .header__theme-menu-list {
@@ -352,8 +360,8 @@
   }
 
   .main_text {
-    letter-spacing: 0;
-    font-size: 17.7px;
+    letter-spacing: 0.1px;
+    font-size: 17.8px;
   }
 
   .what {
