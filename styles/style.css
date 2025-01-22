@@ -206,7 +206,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  block-size: min(100vh, 668px);
+  block-size: max(100vh, 668px);
 }
 
 .footer-title {
@@ -241,7 +241,6 @@
     line-height: 23.4px;
     margin-inline: 385px 20px;
     margin-block-end: 75px;
-    letter-spacing: 0.1px;
   }
 
   .main {
